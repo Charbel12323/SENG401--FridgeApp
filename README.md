@@ -140,12 +140,12 @@ fridge-scanning-app/
 
 | Name | Role |
 |------|------|
-| Lana | Backend Engineer & Testing |
+| Charbel | Project Manager |
 | Aly | LLM Integration Engineer |
 | Gisa | Backend Engineer & Data Scientist |
 | Joshua | Frontend Engineer |
 | Tara | Frontend Engineer |
-| Charbel | Project Manager |
+| Lana | Backend Engineer |
 
 ## Contributing
 
@@ -165,7 +165,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-📧 Email: contact@example.com
+📧 Email: charbel.maroun@ucalgary.ca
 
 ---
 
