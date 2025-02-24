@@ -12,75 +12,71 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
+        <Image
+          source={require('@/assets/images/fridge.jpg')} // replace with your image path 
           style={styles.headerImage}
+          resizeMode="cover" // ensures the image fills the header area and is zoomed in
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">Fridge App</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+      <ThemedText>Your Fridge Friend.</ThemedText>
+      <Collapsible title="Automatic Grocery List">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          If I notice you're missing a usual ingredient, I will add it to a grocery list. {' '}
+          {/* <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
+          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText> */}
         </ThemedText>
-        <ThemedText>
+        {/* <ThemedText>
           The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
           sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
+        </ThemedText> */}
+        {/* <ExternalLink href="https://docs.expo.dev/router/introduction"> */}
           <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        {/* </ExternalLink> */}
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
+      <Collapsible title="Cross-Platform">
         <ThemedText>
           You can open this project on Android, iOS, and the web. To open the web version, press{' '}
           <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Images">
+      <Collapsible title="Scan">
         <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+          If you scan your fridge I will create a digital pantry of all your existing ingredients. 
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
           <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Custom fonts">
+      <Collapsible title="Personalized Recipes">
         <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
+          {/* Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '} */}
           <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
+            Using the ingredients scanned from your fridge, I will create recipes that can be made easily with things you already have at home (You can add general household ingredients that you have as well).
           </ThemedText>
         </ThemedText>
         <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Light and dark mode components">
+      <Collapsible title="Light and Dark Mode">
         <ThemedText>
-          This template has light and dark mode support. The{' '}
+        This app supports both light and dark mode to ensure the best user experience.
+          {/* This template has light and dark mode support. The{' '}
           <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user's current color scheme is, and so you can adjust UI colors accordingly.
+          what the user's current color scheme is, and so you can adjust UI colors accordingly. */}
         </ThemedText>
         <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
-      <Collapsible title="Animations">
+      <Collapsible title="Gym Buddy">
         <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
+          If you choose to be on fitness mode, I can also track and take into consideration calories, macros, nutritional value, dietary restrictions (including bulking/cutting), and help better curate the recipes to align with your fitness and diet goals.
+          {/* This template includes an example of an animated component. The{' '} */}
+          {/* <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
           the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
+          library to create a waving hand animation. */}
         </ThemedText>
         {Platform.select({
           ios: (
@@ -95,15 +91,26 @@ export default function TabTwoScreen() {
   );
 }
 
+// const styles = StyleSheet.create({
+//   headerImage: {
+//     color: '#808080',
+//     bottom: -90,
+//     left: -35,
+//     position: 'absolute',
+//   },
+//   titleContainer: {
+//     flexDirection: 'row',
+//     gap: 8,
+//   },
+// });
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+    width: '100%',
+    height: 310, // Set the height to match the desired size
   },
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+    paddingTop: 20, // Optional: Add padding to position the text properly
   },
 });
